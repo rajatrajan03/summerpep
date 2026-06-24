@@ -251,7 +251,6 @@
 class Person:
     def display(self):
         print("This is a person.")
-        
 class Student(Person):
     def study(self):
         print("This is a student.")
