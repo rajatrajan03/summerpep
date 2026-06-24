@@ -235,3 +235,15 @@
 #         return self.salary
 # emp = Employee(50000)
 # print("After bonus:", emp.bonus(5000))
+
+# Q.4)Create a class Animal and inherit it to create a Dog class.
+class Animal:
+    def eat(self):
+        print("Animal is eating.")
+class Dog(Animal):
+    def bark(self):
+        print("Dog is barking.")
+   
+d=Dog()
+d.eat()
+d.bark()
