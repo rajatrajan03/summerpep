@@ -108,3 +108,52 @@
 # s = Student()
 # s.display()
 # s.study()
+
+# 25/06/2026
+
+# Q1 Create Teacher and Researcher, inherit in Professor.
+# class Teacher:
+#     def teach (self):
+#         print("Teaching student")
+# class Research:
+#     def research(self):
+#         print("Doing Research")
+# class Professor(Teacher, Research):
+#     def guide(self):
+#         print("Guiding students")
+# p = Professor()
+# p.teach()
+# p.research()
+# p.guide()
+
+
+# Q2 Create Fly and Swim, inherit in Duck.
+# class Fly:
+#     def fly(self):
+#         print("Duck can fly")
+# class Swim:
+#     def swim(self):
+#         print("Duck can swim")
+# class Duck(Fly, Swim):
+#     def sound(self):
+#         print("Quack Quack")
+# d = Duck()
+# d.fly()
+# d.swim()
+# d.sound()
+
+
+# # Q3 Create classes GrandFather, Father, and Son to demonstrate Multilevel Inheritance.
+# class GrandFather:
+#     def House(self):
+#         print("Grandfather has a house")
+# class Father(GrandFather):
+#     def Car(self):
+#         print("Father has a Car")
+# class Son(Father):
+#     def Bike(self):
+#         print("Son has a bike")
+# s = Son()
+# s.House()
+# s.Car()
+# s.Bike()
