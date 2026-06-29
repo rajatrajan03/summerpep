@@ -157,3 +157,113 @@
 # s.House()
 # s.Car()
 # s.Bike()
+
+# 26/06/2026
+
+# # Q1. Animal → Mammal → Dog (Multilevel Inheritance)
+# class Animal:
+#     def eat(self):
+#         print("Animal eats food")
+# class Mammal(Animal):
+#     def walk(self):
+#         print("Mammal walks on land")
+# class Dog(Mammal):
+#     def bark(self):
+#         print("Dog barks")
+
+# d = Dog()
+# d.eat()
+# d.walk()
+# d.bark()
+
+# # Q2. Person → Employee → Manager (Multilevel Inheritance)
+# class Person:
+#     def details(self):
+#         print("Person has name and age")
+# class Employee(Person):
+#     def salary(self):
+#         print("Employee gets salary")
+# class Manager(Employee):
+#     def department(self):
+#         print("Manager handles a department")
+# m = Manager()
+# m.details()
+# m.salary()
+# m.department()
+
+# # Q. Shape → Circle, Rectangle (Hierarchical Inheritance)
+
+# class Shape:
+#     def show(self):
+#         print("This is Shape")
+# class Circle(Shape):
+#     def circle(self):
+#         print("This is Circle")
+# class Rectangle(Shape):
+#     def rectangle(self):
+#         print("This is Rectangle")
+# c = Circle()
+# c.show()
+# c.circle()
+# r = Rectangle()
+# r.show()
+# r.rectangle()
+
+
+# # Q. Employee → Developer, Designer (Hierarchical Inheritance)
+# class Employee:
+#     def work(self):
+#         print("Employee works in the company")
+# class Developer(Employee):
+#     def code(self):
+#         print("Developer writes code")
+# class Designer(Employee):
+#     def design(self):
+#         print("Designer creates designs")
+# d = Developer()
+# d.work()
+# d.code()
+# de = Designer()
+# de.design()
+
+# # Q) Person→ Employee → Manager + Developer (Hybrid Inheritance)
+# class Person:
+#     def person(self):
+#         print("I am a Person")
+# class Employee(Person):
+#     def employee(self):
+#         print("I am an Employee")
+# class Manager(Employee):
+#     def manager(self):
+#         print("I am a Manager")
+# class Developer(Employee):
+#     def developer(self):
+#         print("I am a Developer")
+# class TechManager(Manager, Developer):
+#     def techmanager(self):
+#         print("I am a Tech Manager")
+# t = TechManager()
+# t.person()
+# t.employee()
+# t.manager()
+# t.developer()
+# t.techmanager()
+
+# # Q. Vehicle → Car + ElectricCar → HybridCar (Hybrid Inheritance)
+# class Vehicle:
+#     def vehicle(self):
+#         print("This is a Vehicle")
+# class Car(Vehicle):
+#     def car(self):
+#         print("This is a Car")
+# class ElectricCar(Vehicle):
+#     def electric(self):
+#         print("This is an Electric Car")
+# class HybridCar(Car, ElectricCar):
+#     def hybrid(self):
+#         print("This is a Hybrid Car")
+# h = HybridCar()
+# h.vehicle()
+# h.car()
+# h.electric()
+# h.hybrid()
