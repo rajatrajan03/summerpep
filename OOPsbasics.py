@@ -267,3 +267,85 @@
 # h.car()
 # h.electric()
 # h.hybrid()
+
+
+
+# from abc import ABC, abstractmethod
+# class RungtaSystem(ABC):
+#     @abstractmethod
+#     def security(self):
+#         pass
+# class MobileApp(RungtaSystem):
+#     def security(self):
+#         print("Good")
+#     def mobile_login(self):
+#         print("Login into mobile")
+# mobile = MobileApp()
+# mobile.security()
+# mobile.mobile_login()
+
+
+
+# from abc import ABC, abstractmethod
+# class Vehicle(ABC):
+#     @abstractmethod
+#     def start(self):
+#         pass
+#     @abstractmethod
+#     def stop(self):
+#         pass
+# class Car(Vehicle):
+#     def start(self):
+#         print("Car Started")
+#     def stop(self):
+#         print("Car Stopped")
+# car = Car()
+# car.start()
+# car.stop()
+
+
+
+# from abc import ABC, abstractmethod
+# class Teacher(ABC):
+#     @abstractmethod
+#     def teach(self):
+#         pass
+# class Researcher(ABC):
+#     @abstractmethod
+#     def research(self):
+#         pass
+# class Professor(Teacher, Researcher):
+#     def teach(self):
+#         print("Teaching Students")
+#     def research(self):
+#         print("Doing Research")
+#     def work(self):
+#         print("Doing Research Work")
+# p = Professor()
+# p.teach()
+# p.research()
+# p.work()
+
+
+# from abc import ABC, abstractmethod
+# class BankSystem(ABC):
+#     @abstractmethod
+#     def login(self):
+#         pass
+#     @abstractmethod
+#     def transaction(self):
+#         pass
+#     @abstractmethod
+#     def logout(self):
+#         pass
+# class SBI(BankSystem):
+#     def login(self):
+#         print("Login Successful")
+#     def transaction(self):
+#         print("Transaction Completed")
+#     def logout(self):
+#         print("Logout Successful")
+# user = SBI()
+# user.login()
+# user.transaction()
+# user.logout()
