@@ -268,7 +268,7 @@
 # h.electric()
 # h.hybrid()
 
-
+# ABSTRACTION
 
 # from abc import ABC, abstractmethod
 # class RungtaSystem(ABC):
@@ -349,3 +349,31 @@
 # user.login()
 # user.transaction()
 # user.logout()
+
+
+# ENCAPSULATION
+
+# class Student:
+#     def __init__(self):
+#         self.name="Rajat"
+#         self._course="CSE"
+#         self.__marks=90
+#     def get_marks(self):
+#         return self.__marks
+# s=Student()
+# print(s.name)
+# print(s._course)
+# print(s.get_marks())
+
+
+# class Employee:
+#     def __init__(self):
+#         self.name="Rajat"
+#         self.__salary=50000
+#     def get_salary(self):
+#         return self.__salary
+# e=Employee()
+# print(e.name)
+# print(e.get_salary())
+
+
