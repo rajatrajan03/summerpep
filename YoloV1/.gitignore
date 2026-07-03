@@ -1,0 +1,7 @@
+JPEGImages/
+Annotations/
+
+*.pth
+__pycache__/
+*.pyc
+
