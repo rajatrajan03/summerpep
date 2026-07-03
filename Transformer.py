@@ -138,8 +138,7 @@ class Transformer(nn.Module):
         return output
 
 # ============================================================
-# ADDED CODE (Required to run the Transformer)
-# GfG assumes these variables already exist.
+# Required to run the Transformer.
 # Do not remove this block.
 # ============================================================
 
@@ -180,10 +179,7 @@ tgt_data = torch.randint(
     (batch_size, max_seq_length)
 )
 
-# ============================================================
 # END OF ADDED CODE
-# ============================================================
-
 
 criterion = nn.CrossEntropyLoss(ignore_index=0)
 optimizer = optim.Adam(transformer.parameters(), lr=0.0001, betas=(0.9, 0.98), eps=1e-9)
