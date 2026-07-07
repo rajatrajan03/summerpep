@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode AI Assistant",
+  "version": "0.1.0",
+  "description": "An AI assistant for LeetCode problem solving.",
+  "action": {
+    "default_title": "LeetCode AI Assistant",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["storage", "tabs", "notifications", "scripting"],
+  "host_permissions": ["https://leetcode.com/*", "https://api.openai.com/*"],
+  "commands": {
+    "open-popup": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Open LeetCode AI Assistant"
+    },
+    "read-current-problem": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Open LeetCode AI Assistant and read the current problem"
+    },
+    "extract-and-generate": {
+      "suggested_key": {
+        "default": "Alt+Shift+A"
+      },
+      "description": "Extract current problem and generate AI solution"
+    },
+    "insert-cached-code": {
+      "suggested_key": {
+        "default": "Alt+Shift+V"
+      },
+      "description": "Insert cached solution code into editor"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": [
+        "content/parser.js",
+        "content/extractor.js",
+        "content/editor.js",
+        "content/messaging.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

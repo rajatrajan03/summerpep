@@ -1,0 +1,90 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode AI Assistant</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1>LeetCode AI Assistant</h1>
+        <p>Read the current LeetCode problem and inspect what the extension can extract.</p>
+      </header>
+
+      <section class="popup__card">
+        <div class="popup__actions">
+          <button id="refreshButton" type="button">Read Current Problem</button>
+          <button id="generateButton" type="button">Generate AI Solution</button>
+        </div>
+
+        <p id="status">Extension shell loaded.</p>
+        <p id="fieldStatus" class="popup__field-status">Waiting for extraction.</p>
+        <p id="emptyState" class="popup__empty-state">Open a LeetCode problem page, then click Read Current Problem.</p>
+
+        <dl class="problem-summary">
+          <div>
+            <dt>Title</dt>
+            <dd id="problemTitle">Not loaded yet</dd>
+          </div>
+          <div>
+            <dt>Description</dt>
+            <dd id="problemDescription">Not loaded yet</dd>
+          </div>
+          <div>
+            <dt>Constraints</dt>
+            <dd id="problemConstraints">Not loaded yet</dd>
+          </div>
+          <div>
+            <dt>Language</dt>
+            <dd id="problemLanguage">Not loaded yet</dd>
+          </div>
+          <div>
+            <dt>Examples</dt>
+            <dd id="problemExamples">Not loaded yet</dd>
+          </div>
+          <div>
+            <dt>Starter Code</dt>
+            <dd><pre id="problemStarterCode">Not loaded yet</pre></dd>
+          </div>
+        </dl>
+
+        <section class="solution-summary">
+          <h2>AI Response</h2>
+          <div class="solution-summary__item">
+            <h3>Approach</h3>
+            <p id="solutionApproach">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Explanation</h3>
+            <p id="solutionExplanation">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Time Complexity</h3>
+            <p id="solutionTimeComplexity">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Space Complexity</h3>
+            <p id="solutionSpaceComplexity">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Dry Run</h3>
+            <p id="solutionDryRun">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Edge Cases</h3>
+            <p id="solutionEdgeCases">Not generated yet</p>
+          </div>
+          <div class="solution-summary__item">
+            <h3>Code</h3>
+            <pre id="solutionCode">Not generated yet</pre>
+            <button id="insertCodeButton" type="button" class="solution-summary__button" disabled>Insert Code into Editor</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
