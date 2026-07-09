@@ -1,149 +1,233 @@
-SUMMERPEP
-A playground of algorithms, ML experiments, and a LeetCode solving extension scaffold
+<div align="center">
+  <h1>summerpep</h1>
+  <p>A multi-model ML and browser-extension scaffold featuring classic ML algorithms, neural architectures, computer vision models, and a Chrome extension framework.</p>
+</div>
 
-PythonJavaScriptHTML5CSS3StarsForksBranch
-🚀 What is this?
-Summerpep is a multi-domain playground that folds together learning-oriented code samples across data structures, object‑oriented programming, and machine learning, plus a Chrome extension scaffold intended for LeetCode assistance. The repository hosts self-contained demonstrations and experiments in:
+# Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
 
-Fundamentals: DSA basics, OOP patterns, and common design principles.
-ML / CV experiments: ANN, KNN, Transformer models (with multi-head attention), Vision Transformer, YOLOv1 preprocessing/output scaffolding, and a CIFAR-10 data asset.
-Web extension scaffolding: A Solverr extension skeleton with manifest, content scripts, messaging, and UI elements.
-The codebase is a mix of Python (ML demos) and JavaScript/HTML/CSS (extension UI and chrome-extension scaffolding), with supporting assets and documentation in Solverr and ML folders.
+## Features
+- Python-based machine learning algorithms
+  - Artificial Neural Network (ANN) implementation (ANN.py)
+  - K-Nearest Neighbors (KNN.py)
+  - Support Vector Machine (SVM.py)
+  - Data Structures and Algorithms fundamentals (DSA/basics.py)
+  - Object-Oriented Programming basics (OOPsbasics.py)
+- Deep learning and sequence models
+  - Recurrent Neural Network (RNN/RNN.py) with from-scratch implementation
+  - Transformer architecture (Transformer.py) implemented with PyTorch
+  - Vision Transformer (VisonTransformer/Vision_transformer.py) leveraging CIFAR-10 data
+  - Lightweight YOLO v1 model (YoloV1/YoloV1.py) including data preprocessing and output generation
+- Supporting data and utilities
+  - RNN example dataset (RNN/dinos.txt)
+  - CIFAR-10 dataset artifact included (VisonTransformer/data/cifar-10-python.tar.gz)
+  - Pattern recognition / small utilities (pattern.py)
+- Browser-extension scaffold (Solverr)
+  - Chrome extension core and UI scaffolding (Solverr/)
+  - API and content scripts (Solverr/api/ai.js, Solverr/background.js, Solverr/content/editor.js, Solverr/content/parser.js, Solverr/content/messaging.js, Solverr/content/extractor.js)
+  - Extension manifest and UI assets (Solverr/manifest.json, Solverr/popup.html, Solverr/popup.js, Solverr/popup.css)
+  - Architecture and goals documents (Solverr/ARCHITECTURE.md, Solverr/README.md)
+  - Utilities for storage and helpers (Solverr/utils/*)
+- Cross-language tech stack
+  - Python, JavaScript, HTML, CSS
 
-Key folders and what they contain (high level):
+Note on notable contributions
+- RNN implementations from scratch
+- Transformer model with multi-head attention and feed-forward layers (PyTorch)
+- Vision Transformer integration with CIFAR-10 data
+- YOLOv1 model integration and data preprocessing
+- SVM, KNN, and other ML foundations implemented and refined in separate modules
+- Chrome extension scaffolding to illustrate data extraction and messaging flows
 
-ANN.py, KNN.py, DSA/basics.py, OOPsbasics.py, pattern.py — foundational algorithm/demos and object-oriented examples.
-Transformer.py, VisonTransformer/Vision_transformer.py — ML model scaffolding using PyTorch.
-VisonTransformer/data/cifar-10-python.tar.gz — CIFAR-10 data asset.
-YoloV1/YoloV1.py — You Only Look Once v1 related demo and preprocessing scaffold.
-Solverr/ — Chrome extension scaffolding: architecture doc, README, manifest, background/content scripts, messaging, and popup UI.
-Solverr/utils/* — helper utilities, constants, defaults, storage abstractions.
-Solverr/api/ai.js, Solverr/content/* — extension integration points.
-Solverr/ARCHITECTURE.md, Solverr/README.md, Solverr/TODO.md — docs for extension architecture and roadmap.
-Transformer.py, VisonTransformer directory — ML model implementation notes and data.
-Recent commits (highlights)
+## Installation
+This repository contains Python-based ML modules, JavaScript/HTML/CSS front-end components, and a Chrome extension scaffold. Follow the steps below to set up each part.
 
-Implemented ANN and leetcode-solving extension scaffolding (d26afee) 🧠🧩
-Added KNN basics (11d0797) 🧭
-Initial YOLOv1 model/data preprocessing & output generation (4e36670) 🚀🛈
-Transformer model with multi-head attention and feed-forward (beca967) 🔎🧠
-OOP examples: abstraction, encapsulation, inheritance (5cb5d92 / 1e74ebc / 5162f88) 🧱✨
-Cleanup and readability improvements in pattern.py and related examples (ed79f7b, 9c91cbb) 🧽
-Tech stack
+Prerequisites
+- Python 3.8+ and Node.js may be required for some dependencies
+- Basic development environment with Git
 
-Python (core ML demos and scripts: ANN, Transformer, YOLO, Vision Transformer, DSA/OOP samples)
-PyTorch (as noted in Transformer and Vision Transformer implementations)
-JavaScript, HTML, CSS (Solverr Chrome extension scaffold and UI)
-Data assets (CIFAR-10 tarball included for quick experimentation)
-JSON / manifest.json (extension metadata)
-✨ Features
-DSA & OOP Tutorials
+- General prerequisites are inferred from the repository contents (Python ML scripts, PyTorch-based Transformer, and a Chrome extension scaffold)
 
-Practical basics and patterns via files like DSA/basics.py and OOPsbasics.py
-Abstraction, encapsulation, inheritance, and multilevel/inheritance examples
-Pattern.py cleanup and demonstrations
-ML / DL Experiments
+Install steps (Python ML modules)
+- Clone the repository
+  - git clone https://github.com/rajatrajan03/summerpep.git
+  - cd summerpep
 
-ANN.py: Artificial Neural Network demo and intuition
-KNN.py: K-Nearest Neighbors basics
-Transformer.py: Transformer with multi-head attention and feed-forward layers (PyTorch)
-VisonTransformer/Vision_transformer.py: Vision Transformer scaffolding
-YoloV1/YoloV1.py: YoloV1 model scaffolding with data preprocessing and output generation
-CIFAR-10 data asset included for experiments
-Chrome Extension Skeleton (Solverr)
+- Create and activate a Python virtual environment
+  - For macOS/Linux:
+    - python3 -m venv venv
+    - source venv/bin/activate
+  - For Windows:
+    - python -m venv venv
+    - venv\Scripts\activate
 
-Starter architecture for a LeetCode-solving extension
-Architecture doc (ARCHITECTURE.md) and README under Solverr
-Core pieces: manifest.json, background.js, content scripts (editor.js, extractor.js, messaging.js, parser.js), popup UI (popup.html, popup.js, popup.css)
-Storage, utilities, and API scaffolding (utils/*, api/ai.js)
-Data & Assets
+- Install core ML dependencies
+  - pip install numpy torch torchvision transformers
 
-CIFAR-10 dataset bundle included for immediate toy experiments
-Directory structure designed to separate ML demos from extension scaffolding for clarity
-🛠 Installation
-Prerequisites (developer experience)
+- Optional: Install additional libraries as needed by specific scripts
+  - pip install pillow scipy scikit-learn
 
-Python 3.x
-PyTorch (for Transformer / Vision Transformer / YOLO demos)
-Optional: pip for Python dependencies
-A Chrome-compatible browser to load the Solverr extension (no build steps required)
-Step-by-step
+- Prepare dataset artifacts (optional)
+  - The Vision Transformer dataset artifact is included at VisonTransformer/data/cifar-10-python.tar.gz
+  - You may extract it as needed:
+    - tar -xzf VisonTransformer/data/cifar-10-python.tar.gz -C VisonTransformer/data
 
-Clone the repository
-git clone https://github.com/rajatrajan03/summerpep
-cd summerpep
-Python ML demos (ANN, KNN, Transformer, Vision Transformer, YOLO)
-Ensure Python 3.x is installed
-For PyTorch-enabled demos, install PyTorch (visit https://pytorch.org for the right command)
-Basic invocation examples (each file is a self-contained script or module; run or import as needed):
-python3 ANN.py
-python3 KNN.py
-python3 Transformer.py
-python3 VisonTransformer/Vision_transformer.py
-python3 YoloV1/YoloV1.py
-python3 DSA/basics.py
-python3 OOPsbasics.py
-python3 pattern.py
-Chrome extension: Solverr scaffold
-Open Chrome -> chrome://extensions
-Enable Developer mode
-Click "Load unpacked" and select the Solverr directory
-Explore the extension’s architecture and UI (popup, content scripts, messaging, and API hooks)
-Data assets
-If you want to explore CIFAR-10, extract VisonTransformer/data/cifar-10-python.tar.gz and feed it into the Vision Transformer flow as needed
+Install steps (Solverr Chrome extension)
+- The Solverr extension scaffold is located under Solverr/
+- Chrome extension loading steps:
+  - Open Chrome and navigate to chrome://extensions
+  - Enable Developer mode
+  - Click "Load unpacked" and select the Solverr directory
+  - The extension will load with its manifest, background script, and content scripts
+- For development, you can modify Solverr/contents and test via the extension environment
+
+Code and project-wide notes
+- The repository includes architecture notes and usage guidance under Solverr/ARCHITECTURE.md and Solverr/README.md
+- See the dedicated API and content scripts under Solverr/api, Solverr/content, and Solverr/utils
+
+## Usage
+Python ML scripts (example usage)
+- Basic invocation (assumes the script is self-contained and runnable)
+  - python ANN.py
+  - python KNN.py
+  - python SVM.py
+  - python DSA/basics.py
+  - python OOPsbasics.py
+  - python RNN/RNN.py
+  - python Transformer.py
+  - python VisonTransformer/Vision_transformer.py
+  - python YoloV1/YoloV1.py
+  - python pattern.py
+
+Transformer and Vision Transformer usage (PyTorch-based)
+- Ensure PyTorch and related libraries are installed
+  - pip install torch torchvision transformers
+- Run the transformer examples
+  - python Transformer.py
+  - python VisonTransformer/Vision_transformer.py
+
+YOLOv1 usage
+- Run the YOLO v1 script with:
+  - python YoloV1/YoloV1.py
+
+Data and samples
+- RNN/dinos.txt serves as a small dataset sample for RNN-related demonstrations
+- VisonTransformer/data/cifar-10-python.tar.gz is included as a CIFAR-10 dataset artifact for Vision Transformer experiments
+
+Solverr extension usage
+- After loading the unpacked extension, the extension will expose UI, background, and content scripts as defined in Solverr/
+- Core workflow and messaging are described in Solverr/content and Solverr/api
+
+Code examples (illustrative)
+- Example: Run a quick Python script
+  - # Activate environment and run a script
+  - python ANN.py
+
+- Example: Load and run Vision Transformer demo
+  - # Ensure dependencies are installed
+  - python -m pip install torch torchvision transformers
+  - python VisonTransformer/Vision_transformer.py
+
+- Example: Load Solverr extension in Chrome
+  - Open Chrome > chrome://extensions
+  - Enable Developer mode
+  - Click "Load unpacked" and select the Solverr directory
+
+Note: Each script may have its own data requirements, CLI options, or pre-processing steps. Refer to the top-level or module-level docstrings and the inline comments within each file for specific instructions.
+
+## API Reference
+- Python ML modules
+  - ANN.py
+    - Purpose: Basic artificial neural network implementation example
+    - Typical usage:
+      - Run the script to execute the demo: python ANN.py
+  - KNN.py
+    - Purpose: K-Nearest Neighbors classifier demo
+    - Typical usage:
+      - Run the script: python KNN.py
+  - SVM.py
+    - Purpose: Support Vector Machine classifier demo
+    - Typical usage:
+      - Run the script: python SVM.py
+  - DSA/basics.py
+    - Purpose: Data Structures and Algorithms basics
+    - Typical usage:
+      - Run the script: python DSA/basics.py
+  - OOPsbasics.py
+    - Purpose: Object-oriented programming basics
+    - Typical usage:
+      - Run the script: python OOPsbasics.py
+  - RNN/RNN.py
+    - Purpose: Recurrent Neural Network from scratch
+    - Typical usage:
+      - Run the script: python RNN/RNN.py
+  - Transformer.py
+    - Purpose: Transformer architecture with multi-head attention (PyTorch)
+    - Typical usage:
+      - Run the script: python Transformer.py
+  - VisonTransformer/Vision_transformer.py
+    - Purpose: Vision Transformer implementation with CIFAR-10 data
+    - Typical usage:
+      - Run the script: python VisonTransformer/Vision_transformer.py
+  - YoloV1/YoloV1.py
+    - Purpose: YOLO v1 model implementation
+    - Typical usage:
+      - Run the script: python YoloV1/YoloV1.py
+  - pattern.py
+    - Purpose: Pattern recognition and simple demonstration code
+    - Typical usage:
+      - Run the script: python pattern.py
+
+- Solverr (Chrome extension scaffolding)
+  - Solverr/api/ai.js
+    - Purpose: API bridge for the extension's AI-related features
+  - Solverr/background.js
+    - Purpose: Background script for extension lifecycle and messaging
+  - Solverr/content/editor.js
+    - Purpose: Editor content script
+  - Solverr/content/parser.js
+    - Purpose: Data parser for content extraction
+  - Solverr/content/messaging.js
+    - Purpose: Messaging bridge between content and background
+  - Solverr/content/extractor.js
+    - Purpose: Data extraction logic
+  - Solverr/manifest.json
+    - Purpose: Chrome extension manifest
+  - Solverr/popup.html / popup.js / popup.css
+    - Purpose: Extension UI
+  - Solverr/utils/helpers.js, storage.js, constants.js
+    - Purpose: Utility helpers and storage abstractions
+  - Solverr/ARCHITECTURE.md, Solverr/README.md
+    - Purpose: Architecture overview and usage notes
+
+- Miscellaneous
+  - RNN/dinos.txt
+  - VisonTransformer/data/cifar-10-python.tar.gz
+  - Solverr/.editorconfig, Solverr/.gitignore
+  - .vscode/settings.json
+
 Notes
+- The repository contains both Python ML implementations and a Chrome extension scaffold. Each component has its own dependencies and runtime expectations. Check each file's header comments and any accompanying README for specifics.
 
-There is no single install command for all components because the repo is a stitched-together collection of independent demos. Treat each folder/file as a standalone experiment or example.
-If you want to install additional Python dependencies, you can create a local virtual environment and install packages as needed (e.g., PyTorch, numpy, pillow, torchvision, etc.).
-🎮 How to use
-DSA, OOP, and pattern demos
+## Contributing
+- We welcome contributions that improve ML demos, add tests, or enhance the extension scaffold.
+- Guidelines:
+  - Fork the repository and create a feature branch (e.g., feature/add-transformer-demo)
+  - Ensure code style aligns with existing modules
+  - Add or update documentation for any new scripts or extension features
+  - Open a pull request with a clear summary of changes
+- For any extension work, ensure manifest and content/security considerations are respected. See Solverr/ARCHITECTURE.md and Solverr/README.md for guidance.
 
-Each file is designed to be run as a standalone Python script. For example:
-python3 DSA/basics.py to see data structure demonstrations
-python3 OOPsbasics.py to view basic OOP examples
-Inspect the code for usage examples, classes, and functions. They’re educational snippets meant for learning and experimentation.
-Machine Learning demos
+## License
+- License information is not present in the repository root (no LICENSE file detected in the provided structure).
+- If you plan to use or distribute this work, consider adding a suitable license file to clarify usage rights, attribution, and contribution terms.
 
-ANN.py, KNN.py, Transformer.py, Vision Transformer, and YOLO v1 scripts are self-contained demonstrations relying on PyTorch and standard ML libraries.
-Example run sequence (adjusted to your environment and data):
-python3 ANN.py
-python3 KNN.py
-python3 Transformer.py
-python3 VisonTransformer/Vision_transformer.py
-python3 YoloV1/YoloV1.py
-Some scripts may require command-line arguments or dataset preparation steps; refer to the script headers or inline comments for specifics.
-Solverr extension
+If you’d like, I can tailor this README to a specific audience (e.g., internal engineering teams, data science practitioners, or platform engineers) or expand any section with more detailed, script-specific notes as soon as you provide or confirm additional context about dependencies and runtime instructions.
 
-The Solverr folder contains a Chrome extension scaffold (manifest.json, background.js, content scripts, popup UI, etc.).
-Load the folder into Chrome as an unpacked extension and explore how the extension communicates via messaging.js, parser.js, and editor.js.
-The included ARCHITECTURE.md and Solverr/README.md provide deeper context on how the extension is intended to function.
-Data assets
-
-CIFAR-10 tarball is included for quick experimentation with the Vision Transformer demo. You can extract it locally and wire it into the data pipeline as needed.
-🤝 Contributing
-Love the mix of algorithms, ML experiments, and extension scaffolds? We’d love contributors!
-
-Contribution ideas
-
-Add more DSA or OOP examples (in their respective Python files) with clear commentary.
-Expand ML demos: add training loops, evaluation scripts, or small utilities around Transformer and Vision Transformer.
-Improve the Solverr extension scaffold: add more features, robust messaging, error handling, or a tiny demo LeetCode workflow.
-Update architecture docs in Solverr/ARCHITECTURE.md or Solverr/README.md with clearer diagrams.
-Update or add datasets to the Vision Transformer flow (e.g., different toy datasets, data loaders).
-How to contribute
-
-Fork the repo and create a feature branch: git checkout -b feat/your-feature
-Implement changes with clear, well-documented code
-Run existing demos to ensure compatibility
-Submit a PR against main with a descriptive summary of your changes
-Code style and guidelines
-
-Python: prefer readability (PEP8-ish guidance), docstrings, and clear function/class names
-JavaScript/HTML/CSS: keep UI code clean; add comments where necessary
-Documented changes: update README sections or add a short CONTRIBUTING note in Solverr/README.md as needed
-Community and docs
-
-Solverr/ARCHITECTURE.md and Solverr/README.md provide architectural context for the extension scaffold.
-The repository’s recent commits show active expansion into ML models (ANN, Transformer, YOLO), OOP/DSA examples, and the extension scaffold.
-If you’d like, I can tailor this README further to emphasize a particular component (e.g., focus more on the ML experiments or the Solverr extension) or generate a concise quick-start guide for beginners.
-
+---
+*Made with: [gittool.dev](https://gittool.dev)*
