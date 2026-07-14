@@ -1,0 +1,4 @@
+clip.pt
+__pycache__/
+.cache/
+*.pyc
