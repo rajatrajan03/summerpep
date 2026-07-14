@@ -104,3 +104,12 @@ plt.xlabel("Epoch")
 plt.ylabel("MSE Loss")
 plt.grid(True)
 plt.show()
+
+# Actual vs Predicted 
+plt.figure(figsize=(7,5))
+plt.scatter(y_test,predictions)
+plt.xlabel("Actual")
+plt.ylabel("Predicted")
+plt.title("Actual vs Predicted")
+plt.grid(True)
+plt.show()
